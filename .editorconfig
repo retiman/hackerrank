@@ -1,0 +1,14 @@
+# Do not enable the VSCode EditorConfig plugin; the prettier plugin will automatically format code for you anyways, and
+# the VSCode plugin will move your cursor unexpectedly when formatting files as you edit.  It's a bug that hasn't been
+# fixed for a long time.
+#
+# https://github.com/editorconfig/editorconfig-vscode/issues/40
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true

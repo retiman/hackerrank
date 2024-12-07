@@ -1,0 +1,65 @@
+{
+  "name": "template-typescript-repository",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Min Huang",
+  "email": "min.huang@alumni.usc.edu",
+  "description": "Template typescript repository",
+  "homepage": "https://github.com/retiman/template-typescript-repository#README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retiman/template-typescript-repository.git"
+  },
+  "bugs": {
+    "url": "https://github.com/retiman/template-typescript-repository/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "node script/clean.js",
+    "fix": "npm run lint:fix && npm run format:fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "postbuild": "node script/postbuild.js",
+    "test": "npm run test:unit",
+    "test:unit": "jest --config test/unit/jest.config.js",
+    "test:integration": "jest --config test/integration/jest.config.js",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "all": "npm run clean && npm run fix && npm run build && npm run test"
+  },
+  "main": "dist/index.js",
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.8",
+    "tsyringe": "^4.8.0",
+    "reflect-metadata": "^0.2.2",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.4",
+    "@typescript-eslint/parser": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "editorconfig": "^2.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "fs-extra": "^11.1.1",
+    "jest": "^29.7.0",
+    "nock": "^13.3.1",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}

@@ -10,5 +10,10 @@ charset = utf-8
 end_of_line = lf
 indent_size = 2
 indent_style = space
-insert_final_newline = true
+# Setting this to true makes VSCode break typing flow.  Even though the ticket below says the issue is closed, it
+# appears that certain conditions still break typing flow (see the last comment).  We can just use prettier to include
+# the final newline.
+#
+# See https://github.com/editorconfig/editorconfig-vscode/issues/40
+# insert_final_newline = true
 trim_trailing_whitespace = true

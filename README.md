@@ -1,3 +1,3 @@
-# template-typescript-repository
+# hackerrank
 
-Template repository for my private typescript projects.
+Problems and solutions for hackerrank.
